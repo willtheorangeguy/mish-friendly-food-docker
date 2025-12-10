@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    # Replace `mishmanners` with your GitHub org/user if different
+    image: ghcr.io/mishmanners/mish-friendly-food:latest
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    # If you need to override with a different image, set the IMAGE env var before running:
+    # image: ${IMAGE:-ghcr.io/mishmanners/mish-friendly-food:latest}
